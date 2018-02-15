@@ -1,0 +1,62 @@
+.card{
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height:50rem;
+    &__side{
+        //overrall styling
+        height:50rem;
+        transition: all 1s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: 3px;
+
+
+        &--front{
+            background-color:$color-white;
+        }
+
+        &--back{
+            transform: rotateY(180deg);
+
+            &-1{
+                background-image: linear-gradient(to right bottom,$color-secondary-light,$color-secondary-dark);
+                box-shadow: 0 1.5rem 4rem rgba(255, 119, 48, 1);
+            }
+
+            &-2{
+                background-image: linear-gradient(to right bottom,$color-primary-light, $color-primary-dark);
+                box-shadow: 0 1.5rem 4rem rgba(40, 180, 133, 1);
+            }
+
+            &-3{
+                background-image: linear-gradient(to right bottom,$color-tertiary-light, $color-tertiary-dark);
+                box-shadow: 0 1.5rem 4rem rgba(86, 67, 250, 1)
+            }
+        }
+
+    }
+
+
+
+    &:hover &__side--front{
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back{
+        transform: rotateY(0);
+    }
+
+    //frontstyle styling
+    &__picture{
+
+        &--1{
+            background-image: url(../img/nat-5.img);
+        }
+
+    }
+
+}
