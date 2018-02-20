@@ -3,11 +3,13 @@
     &:visited{
         text-transform: uppercase;
         text-decoration: none;
-        padding: 1.5rem 4rem;
+        padding: 1rem 3rem;
         display: inline-block;
         border-radius: 10rem;
         transition: all.2s;
         position: relative;
+
+
         animation-name: moveup;
         animation-duration: 5s;
         animation-timing-function: ease-in-out;
@@ -17,7 +19,6 @@
     &:hover{
         transform: translateY(-3px);
         box-shadow: 0 1rem 2rem rgba($color-black, .2);
-        box-shadow: 0 .5rem 1rem rgba($color-black, .2);
         &::after{
             transform: scaleX(1.5) scaleY(1.7);
             opacity: 0;
@@ -31,6 +32,8 @@
     &--white{
         background-color: $color-white;
         color:$color-grey-dark;
+
+
         animation-name: moveInLeft;
         animation-duration: 5s;
         animation-timing-function: ease-in-out;
@@ -54,6 +57,7 @@
         top: 0;
         left:0;
         z-index: -1;
+        transition:all .4s;
     }
 
 
@@ -138,6 +142,7 @@
         top: 0;
         left:0;
         z-index: -1;
+        transition: all .2s;
     }
 
 
