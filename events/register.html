@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/icon-font.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        
+        <title>Where To? | Event app for everyone</title>
+    </head>
+        <body>
+            <main>
+            <div class="bg-video">
+                    <video  class="bg-video__content" autoplay muted loop>
+                        <source src="img/Palm_Trees.mp4" type="video/mp4">
+                        <source src="img/Palm_Trees.webm" type="video/webm">
+                        Your Browser is not supported
+                    </video>
+                </div>
+                <!-- NEW LOGIN CSS -->
+                <section class="section-book">
+                    <div class="row">
+                        <div class="book">
+                            <div class="book__form">
+                                <form action="#bottom" class="form">
+                                    <div class="u-margin-bottom-medium">
+                                            <h2 class="heading-secondary">Welcome Back!</h2>
+                                    </div>
+                                    <div class="form__group">
+                                        <input type="email" class="form__input" placeholder="Email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="Must be a Valid Email Ex: rob@rob.com">
+                                        <label for="username" class="form__label">Email</label>
+                                    </div>
+                                    <div class="form__group">
+                                            <input type="firstName" class="form__input" placeholder="firstName" id="firstName" name="firstName" required minlength="2" title="Must have firstName">
+                                            <label for="firstName" class="form__label">firstName</label>
+                                    </div>
+                                    <div class="form__group">
+                                            <input type="lastName" class="form__input" placeholder="lastName" id="lastName" name="lastName" required minlength="2" title="Must have lastName">
+                                            <label for="lastName" class="form__label">lastName</label>
+                                    </div>
+                                    <div class="form__group">
+                                            <input type="city" class="form__input" placeholder="Location" id="city" name="city" required minlength="2" title="Must have Location">
+                                            <label for="city" class="form__label">city</label>
+                                    </div>
+                                    <div class="form__group">
+                                            <input type="state" class="form__input" placeholder="Enter State" id="state" name="state" required pattern="[A-Z]{2}" maxlength="2" title="Must have State in uppercase">
+                                            <label for="state" class="form__label">city</label>
+                                    </div>
+                                
+                                    <div class="form__group">
+                                            <input type="password" class="form__input" placeholder="Password" id="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+                                            <label for="password" class="form__label">Password</label>
+                                    </div>
+                                    <div class="form__group">
+                                            <input type="password" class="form__input" placeholder="Confirm Password " id="confirm " required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+                                            <label for="confirm" class="form__label">Password</label>
+                                    </div>
+                                    <div class="form__group">
+                                        <button class="green__button green__button--green2">Login</button>
+                                        <a href="https://www.google.com" class="btn-text">Already Have an Account? &rarr;</a>
+                                    </div>
+                                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"></input>
+                                </form>
+                            </div>
+    
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+        </body>
+   </html>
+
+<!-- <body>
+    <h1>Register </h1>
+                        <form:form name="register" class="form-horizontal" action="/register" method="post" modelAttribute="user">
+                            <div class="form-group">
+                                <form:label class="control-label col-sm-2" path="email">Email:</form:label>
+                                <div class="col-sm-5">
+                                    <form:input type="email" class="form-control" id="email" placeholder="Enter email" path="email"></form:input>
+                                </div>
+                            </div>
+                        
+                            <div class="form-group">
+                                <form:label class="control-label col-sm-2" path="firstName">First Name:</form:label>
+                                <div class="col-sm-5">
+                                    <form:input type="text" class="form-control" id="firstName" placeholder="Enter First Name" path="firstName"></form:input>
+                                </div>
+                            </div>
+            
+                            <div class="form-group">
+                                <form:label class="control-label col-sm-2" path="lastName">Last Name:</form:label>
+                                <div class="col-sm-5">
+                                    <form:input type="text" class="form-control" id="lastName" placeholder="Enter Last Name" path="lastName"></form:input>
+                                </div>
+                            </div>	
+                            <div class="form-group">
+                                <form:label class="control-label col-sm-2" path="city">Location:</form:label>
+                                <div class="col-sm-5">
+                                    <form:input type="text" class="form-control" id="city" placeholder="Enter Location" path="city"></form:input>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <form:label class="control-label col-sm-2" path="state">State:</form:label>
+                                <div class="col-sm-5">
+                                    <form:input type="text" class="form-control" id="state" placeholder="Enter State" path="state"></form:input>
+                                </div>
+                            </div>
+            
+                            <div class="form-group">
+                                <form:label class="control-label col-sm-2" path="password">Password:</form:label>
+                                <div class="col-sm-5">
+                                    <form:input type="password" class="form-control" id="password" placeholder="Enter Password" path="password"></form:input>
+                                </div>
+                            </div>	
+                
+                            <div class="form-group">
+                                <form:label class="control-label col-sm-2" path="confirm">Confirm Password:</form:label>
+                                <div class="col-sm-5">
+                                    <form:input type="password" class="form-control" id="confirm" placeholder="Confirm Password" path="confirm"></form:input>
+                                </div>
+                            </div>	
+                            
+                            <div class="form-group">        
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-default">Register</button>
+                                </div>
+                            </div>
+                        </form:form>
+                        <spring:hasBindErrors name="user">
+                            <c:forEach items="${errors.allErrors}" var="error">
+                                <div class="alert alert-danger alert-dismissable">
+                                    <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                                    <spring:message message="${error}"></spring:message>
+                                </div>					
+                            </c:forEach>
+                        </spring:hasBindErrors>
+                    </div>
+</body> -->
+

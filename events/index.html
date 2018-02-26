@@ -10,181 +10,49 @@
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" type="image/png" href="img/favicon.png">
         
-        <title>Natours | Exciting tours for adventurous people</title>
+        <title>Where To? | Event app for everyone</title>
     </head>
-    <body>
-        <header class="header">
-         <div class="header__logo-box">
-             <img src="img/logo-white.png" alt="logo" class="header__logo">
-         </div>
-            <div class="header__text-box">
-                <h1 class="heading-primary">
-                <span class="heading-primary--main">Outdoors</span>
-                <span class="heading-primary--sub">where life happens</span>
-                </h1>
-                <a href="#" class="btn btn--white btn--animated">Discover More</a>
-            </div>
+        <body>
+            <main>
+            <div class="bg-video">
+                    <video  class="bg-video__content" autoplay muted loop>
+                        <source src="img/Palm_Trees.mp4" type="video/mp4">
+                        <source src="img/Palm_Trees.webm" type="video/webm">
+                        Your Browser is not supported
+                    </video>
+                </div>
+                <!-- NEW LOGIN CSS -->
+                <section class="section-book">
+                    <div class="row">
+                        <div class="book">
+                            <div class="book__form">
+                                <form action="#bottom" class="form">
+                                    <div class="u-margin-bottom-medium">
+                                            <h2 class="heading-secondary">Welcome Back!</h2>
+                                    </div>
+                                    <div class="form__group">
+                                        <input type="email" class="form__input" placeholder="Email" id="username" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="Must be a Valid Email Ex: rob@rob.com">
+                                        <label for="username" class="form__label">Email</label>
+                                    </div>
+                                    <div class="form__group">
+                                            <input type="password" class="form__input" placeholder="Password" id="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+                                            <label for="password" class="form__label">Password</label>
+                                    </div>
+                                    <div class="form__group">
+                                        <button class="green__button green__button--green2">Login</button>
+                                        <a href="https://www.google.com" class="btn-text">Don't Have an Account? &rarr;</a>
+                                    </div>
+                                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"></input>
+                                </form>
+                            </div>
+    
+                        </div>
+                    </div>
+                </section>
 
-        </header>
-        <main>
-            <section class="section-about">
-                <div class="u-center-text u-margin-bottom-big">
-                    <h2 class="heading-secondary">
-                            Exciting tours for adventurous people
-                    </h2>
-                </div>
-                <div class="row">
-                        <div class="col-1-of-2">
-                           <h3 class="heading-tertiary u-margin-bottom-small">You're going to fall in love with nature</h3>
-                           <p class="paragraph">
-                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita quaerat rem possimus dolore dicta eius in tempora sint mollitia sed magnam repellendus eum, laborum quia eos! Ullam fuga eveniet nostrum.
-                           </p>
-                           <h3 class="heading-tertiary u-margin-bottom-small">Live adventures like you never have before</h3>
-                           <p class="paragraph">
-                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita quaerat rem possimus dolore dicta eius.... 
-                           </p>
-                           <a href="" class="btn-text">Learn More &rarr;</a>
-                        </div>
-                        <div class="col-1-of-2">
-                           <div class="composition">
-                               <img src="img/nat-1.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
-                               <img src="img/nat-2.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
-                               <img src="img/nat-3.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
-                           </div>
-                        </div>
-                    </div>
-            </section>
-            <section class="section-features">
-                <div class="row">
-                    <div class="col-1-of-4">
-                        <div class="feature-box">
-                            <i class="feature-box__icon icon-basic-world"></i>
-                            <h3 class="heading-tertiary u-margin-bottom-small">Explore The World</h3>
-                            <p class="feature-box__text">
-                            vel atque porro harum, impedit nostrumvel atque porro harum, impedit nostrum quo at aperiam odit nobis saepe esse rerum consequuntur.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-1-of-4">
-                        <div class="feature-box">
-                            <i class="feature-box__icon icon-basic-compass"></i>
-                            <h3 class="heading-tertiary u-margin-bottom-small">Meet Nature </h3>
-                            <p class="feature-box__text">
-                            vel atque porro harum, impedit nostrumvel atque porro harum, impedit nostrum quo at aperiam odit nobis saepe esse rerum consequuntur.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-1-of-4">
-                        <div class="feature-box">
-                            <i class="feature-box__icon icon-basic-map"></i>
-                            <h3 class="heading-tertiary u-margin-bottom-small">Find Your Way</h3>
-                            <p class="feature-box__text">
-                            vel atque porro harum, impedit nostrumvel atque porro harum, impedit nostrum quo at aperiam odit nobis saepe esse rerum consequuntur.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-1-of-4">
-                        <div class="feature-box">
-                            <i class="feature-box__icon icon-basic-heart"></i>
-                            <h3 class="heading-tertiary u-margin-bottom-small">Live a Healthier life</h3>
-                            <p class="feature-box__text">
-                            vel atque porro harum, impedit nostrumvel atque porro harum, impedit nostrum quo at aperiam odit nobis saepe esse rerum consequuntur.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section-tours">
-                <div class="u-center-text u-margin-bottom-big">
-                    <h2 class="heading-secondary">
-                           Most popular tours
-                    </h2>
-                </div>
-                <div class="row">
-                    <div class="col-1-of-3">
-                        <div class="card">
-                           <div class="card__side card__side--front">
-                               <div class="card__picture card__picture--1">
-                                   &nbsp;
-                               </div>
-                            <div class="card__box">
-                               <h4 class="card__heading">
-                                   <span class="card__heading-span card__heading-span--1">
-                                        the sea Explorer
-                                   </span>
-                               </h4>
-                               <p class="card__details">tias voluptatibus ea nostrum, dolorem enim, rerum deleniti a possimustias voluptatibus ea nostrum, dolorem enim, rerum deleniti a possimus laudantium temporibus veritatis tias voluptatibus ea nostrum, dolorem enim, rerum deleniti a possimus laudantium.... </p>
-                            </div>
-                            </div>
-                           <div class="card__side card__side--back card__side--back-1">
-                                <div class="card__cta">
-                                    <div class="card__price-box">
-                                        <p class="card__price-only">only</p>
-                                        <p class="card__price-value">$297</p>
-                                    </div>
-                                    <a href="https://www.linkedin.com/in/robert-bett/" class="card__button">Book now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-1-of-3">
-                        <div class="card">
-                            <div class="card__side card__side--front">
-                                    <div class="card__picture card__picture--2">
-                                            &nbsp;
-                                        </div>
-                                     <div class="card__box">
-                                        <h4 class="card__heading">
-                                            <span class="card__heading-span card__heading-span--2">
-                                                 the forest hiker
-                                            </span>
-                                        </h4>
-                                        <p class="card__details">tias voluptatibus ea nostrum, dolorem enim, rerum deleniti a possimustias voluptatibus ea nostrum, dolorem enim, rerum deleniti a possimus laudantium temporibus veritatis tias voluptatibus ea nostrum, dolorem enim, rerum deleniti a possimus laudantium.... </p>
-                                     </div>
-                            </div>
-                            <div class="card__side card__side--back card__side--back-2">
-                                <div class="card__cta">
-                                        <div class="card__price-box">
-                                            <p class="card__price-only">only</p>
-                                            <p class="card__price-value">$179</p>
-                                        </div>
-                                        <a href="https://www.linkedin.com/in/robert-bett/" class="card__button">Book now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-1-of-3">
-                        <div class="card">
-                            <div class="card__side card__side--front">
-                                <div class="card__picture card__picture--3">
-                                        &nbsp;
-                                    </div>
-                                    <div class="card__box">
-                                    <h4 class="card__heading">
-                                        <span class="card__heading-span card__heading-span--3">
-                                            the snow adventure
-                                        </span>
-                                    </h4>
-                                    <p class="card__details">tias voluptatibus ea nostrum, dolorem enim, rerum deleniti a possimustias voluptatibus ea nostrum, dolorem enim, rerum deleniti a possimus laudantium temporibus veritatis tias voluptatibus ea nostrum, dolorem enim, rerum deleniti a possimus laudantium.... </p>
-                                </div>
-                            </div>
-                            <div class="card__side card__side--back card__side--back-3">
-                                <div class="card__cta">
-                                        <div class="card__price-box">
-                                            <p class="card__price-only">only</p>
-                                            <p class="card__price-value">$223</p>
-                                        </div>
-                                        <a href="https://www.linkedin.com/in/robert-bett/" class="card__button">Book now</a>
-                                </div>
-                             </div>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="u-center-text u-margin-top-big">
-                        <a href="" class="green__button green__button--green2">discover all tours</a>
-                    </div>
-            </section>
-        </main>
+            </main>
+        </body>
+   </html>
         <!--
         <section class="grid-test">
             <div class="row">
@@ -250,5 +118,3 @@
 
         </section>
         -->
-    </body>
-</html>
